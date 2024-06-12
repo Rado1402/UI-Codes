@@ -1,0 +1,78 @@
+       Start
+        |
+        |
+        V
+  [Define file_path]
+        |
+        |
+        V
+  [Run 'cat' command]
+        |
+        |
+        V
+ [Capture cat output]
+        |
+        |
+        V
+ [Check return code]
+        |
+        |
+        |
+        |
+        V
+       / \
+      /   \
+     /     \
+    /       \
+   /         \
+   |         |
+   V         V
+[Return Code = 0]   [Return Code ≠ 0]
+   |               |
+   |               |
+   V               V
+[Split cat output]   [Print 'Error running cat']
+   |               |
+   |               |
+   V               V
+[Skip headers]       [Exit with status code 1]
+   |               |
+   |               |
+   V               V
+[Initialize variables]  [Count the number of sessions]
+   |               |
+   |               |
+   V               V
+[Loop through data lines]  [Extract session details]
+   |               |
+   |               |
+   V               V
+[Calculate total uptime and minimum uptime]
+   |               |
+   |               |
+   V               V
+[Calculate minimum uptime in days or hours]
+   |               |
+   |               |
+   V               V
+[Check number of sessions]
+   |               |
+   |               |
+   |               |
+   |               V
+   |              [Print 'OK']
+   |               |
+   |               V
+   |             [Print 'WARNING']
+   |               |
+   V               |
+[Print session details]
+   |               |
+   |               V
+   |             [Exit with status code 0 (OK)]
+   V
+[Print 'Error running cat']
+   |
+   V
+[Exit with status code 1]
+
